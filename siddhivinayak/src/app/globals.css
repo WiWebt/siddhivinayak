@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 249, 250, 251;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full transition-all duration-300;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-100 hover:bg-gray-200 text-gray-800 px-6 py-2 rounded-full transition-all duration-300;
+  }
+
+  .heading-1 {
+    @apply text-4xl font-bold text-gray-900 mb-6;
+  }
+
+  .heading-2 {
+    @apply text-3xl font-semibold text-gray-900 mb-4;
+  }
+
+  .paragraph {
+    @apply text-gray-600 leading-relaxed;
+  }
+}
+
+/* Modern Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+
+/* Custom Classes */
+.gradient-text {
+  @apply bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent;
+}
+
+.gradient-bg {
+  @apply bg-gradient-to-r from-blue-600 to-teal-500;
+}
+
+.gradient-border {
+  @apply border-2 border-transparent bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-border;
+}
+
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-lg hover:scale-105;
+}
+
+/* Glass Effect */
+.glass {
+  @apply bg-white/70 backdrop-blur-md;
+}
+
+/* Animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Animation classes */
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    transform: translateY(20px); 
+    opacity: 0; 
+  }
+  to { 
+    transform: translateY(0); 
+    opacity: 1; 
+  }
+}
+
+/* Fix for content jumping when scrollbar appears */
+html {
+  width: 100vw;
+  overflow-x: hidden;
+}
