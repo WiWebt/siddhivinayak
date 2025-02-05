@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { getImagePath } from '@/utils/path';
 
 // This is the same services data from the main services page
 const services = [
@@ -8,7 +9,7 @@ const services = [
     id: 'ear-care',
     title: 'Ear Care Services',
     description: 'Comprehensive ear care including hearing tests, surgeries, and treatments.',
-    image: '/images/services/ear-care.jpg',
+    image: getImagePath('/images/services/ear-care.jpg'),
     longDescription: 'Our ear care services provide comprehensive diagnosis and treatment for all types of ear conditions. We use state-of-the-art equipment and advanced techniques to ensure the best possible care for our patients.',
     services: [
       'Hearing Aid Fitting',
@@ -26,7 +27,7 @@ const services = [
     id: 'nose-sinus',
     title: 'Nose & Sinus Care',
     description: 'Advanced treatments for nasal and sinus conditions.',
-    image: '/images/services/nose-care.jpg',
+    image: getImagePath('/images/services/nose-care.jpg'),
     longDescription: 'Our nose and sinus care services offer comprehensive treatment for various nasal and sinus conditions. We use advanced diagnostic tools and treatment methods to provide effective relief from sinus-related problems.',
     services: [
       'Sinus Surgery',
@@ -43,7 +44,7 @@ const services = [
     id: 'throat-voice',
     title: 'Throat & Voice Treatment',
     description: 'Specialized care for throat conditions and voice disorders.',
-    image: '/images/services/throat-care.jpg',
+    image: getImagePath('/images/services/throat-care.jpg'),
     longDescription: 'Our throat and voice treatment services focus on diagnosing and treating various throat conditions and voice disorders. We provide personalized care plans to help restore and maintain optimal vocal health.',
     services: [
       'Tonsillitis Treatment',
@@ -60,7 +61,7 @@ const services = [
     id: 'head-neck',
     title: 'Head & Neck Care',
     description: 'Comprehensive treatment for head and neck conditions.',
-    image: '/images/services/head-neck.jpg',
+    image: getImagePath('/images/services/head-neck.jpg'),
     longDescription: 'Our head and neck care services provide comprehensive treatment for various conditions affecting the head and neck region. We offer both surgical and non-surgical treatment options.',
     services: [
       'Headache & Neck Pain Management',
@@ -75,7 +76,7 @@ const services = [
     id: 'pediatric',
     title: 'Pediatric ENT Services',
     description: 'Specialized ENT care for children.',
-    image: '/images/services/pediatric-ent.jpg',
+    image: getImagePath('/images/services/pediatric-ent.jpg'),
     longDescription: 'Our pediatric ENT services are specially designed to cater to the unique needs of children. We provide child-friendly care in a comfortable environment.',
     services: [
       'Pediatric Ear Infections Treatment',
@@ -91,7 +92,7 @@ const services = [
     id: 'balance',
     title: 'Balance & Dizziness Treatment',
     description: 'Expert care for balance disorders and dizziness.',
-    image: '/images/services/balance-dizziness.jpg',
+    image: getImagePath('/images/services/balance-dizziness.jpg'),
     longDescription: 'Our balance and dizziness treatment services help diagnose and treat various vestibular disorders. We use advanced diagnostic equipment to determine the root cause of balance issues.',
     services: [
       'Vertigo & Dizziness Management',

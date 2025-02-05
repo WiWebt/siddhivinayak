@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { getImagePath } from '@/utils/path';
 
 export default function AboutPage() {
   return (
@@ -8,7 +9,7 @@ export default function AboutPage() {
         {/* Hero Section */}
         <div className="relative h-[400px] rounded-xl overflow-hidden mb-16">
           <Image
-            src="/images/hero-banner.jpg"
+            src={getImagePath('/images/hero-banner.jpg')}
             alt="About Us"
             fill
             className="object-cover"
@@ -43,7 +44,7 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
           <div className="relative h-[500px] rounded-xl overflow-hidden shadow-xl">
             <Image
-              src="/images/clinic_gallery/clinic_entry.jpg"
+              src={getImagePath('/images/clinic_gallery/clinic_entry.jpg')}
               alt="Our Clinic"
               fill
               className="object-cover"

@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { getImagePath } from '@/utils/path';
 
 const doctors = [
   {
@@ -14,7 +15,7 @@ const doctors = [
       'Pediatric Otorhinolaryngologist'
     ],
     availability: 'Mon-Sat 05:30-08:30',
-    image: '/images/doctors/doctor1.jpg'
+    image: getImagePath('/images/doctors/doctor1.jpg')
   },
   {
     id: 'pranita-bauskar',
@@ -27,7 +28,7 @@ const doctors = [
       'Pediatric Otorhinolaryngologist'
     ],
     availability: 'Mon-Sat 10:30-01:30',
-    image: '/images/doctors/doctor2.jpg'
+    image: getImagePath('/images/doctors/doctor2.jpg'),
   }
 ];
 

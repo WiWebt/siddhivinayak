@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { getImagePath } from '@/utils/path';
 
 const doctors = [
   {
@@ -15,7 +16,7 @@ const doctors = [
       'Pediatric Otorhinolaryngologist'
     ],
     availability: 'Mon-Sat 05:30-08:30',
-    image: '/images/doctors/doctor1.jpg',
+    image: getImagePath('/images/doctors/doctor1.jpg'),
     bio: `Dr. Manoj M. Bauskar is a highly experienced ENT specialist with over 21 years of dedicated service in the field. He specializes in both adult and pediatric ENT care, offering comprehensive treatment for various ear, nose, and throat conditions.`,
     expertise: [
       'Advanced ear surgery',
@@ -42,7 +43,7 @@ const doctors = [
       'Pediatric Otorhinolaryngologist'
     ],
     availability: 'Mon-Sat 10:30-01:30',
-    image: '/images/doctors/doctor2.jpg',
+    image: getImagePath('/images/doctors/doctor2.jpg'),
     bio: `Dr. Pranita Bauskar brings 20 years of expertise in ENT care, with a special focus on pediatric ENT conditions and advanced diagnostic procedures. Her patient-centered approach ensures comprehensive care for all age groups.`,
     expertise: [
       'Pediatric ENT care',

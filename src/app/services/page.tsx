@@ -1,42 +1,43 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { getImagePath } from '@/utils/path';
 
 const services = [
   {
     id: 'ear-care',
     title: 'Ear Care Services',
     description: 'Comprehensive ear care including hearing tests, surgeries, and treatments.',
-    image: '/images/services/ear-care.jpg'
+    image: getImagePath('/images/services/ear-care.jpg')
   },
   {
     id: 'nose-sinus',
     title: 'Nose & Sinus Care',
     description: 'Advanced treatments for nasal and sinus conditions.',
-    image: '/images/services/nose-care.jpg'
+    image: getImagePath('/images/services/nose-care.jpg')
   },
   {
     id: 'throat-voice',
     title: 'Throat & Voice Treatment',
     description: 'Specialized care for throat conditions and voice disorders.',
-    image: '/images/services/throat-care.jpg'
+    image: getImagePath('/images/services/throat-care.jpg')
   },
   {
     id: 'head-neck',
     title: 'Head & Neck Care',
     description: 'Comprehensive treatment for head and neck conditions.',
-    image: '/images/services/head-neck.jpg'
+    image: getImagePath('/images/services/head-neck.jpg')
   },
   {
     id: 'pediatric',
     title: 'Pediatric ENT Services',
     description: 'Specialized ENT care for children.',
-    image: '/images/services/pediatric-ent.jpg'
+    image: getImagePath('/images/services/pediatric-ent.jpg')
   },
   {
     id: 'balance',
     title: 'Balance & Dizziness Treatment',
     description: 'Expert care for balance disorders and dizziness.',
-    image: '/images/services/balance-dizziness.jpg'
+    image: getImagePath('/images/services/balance-dizziness.jpg')
   }
 ];
 

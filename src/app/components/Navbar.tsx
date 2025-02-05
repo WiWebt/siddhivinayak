@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { getImagePath } from '@/utils/path';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +14,7 @@ export default function Navbar() {
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="flex items-center space-x-2">
               <Image
-                src="/images/logo.png"
+                src={getImagePath('/images/logo.png')}
                 alt="Siddhivinayak ENT"
                 width={50}
                 height={50}
