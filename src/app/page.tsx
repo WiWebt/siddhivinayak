@@ -1,42 +1,44 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { getImagePath } from '@/utils/path';
+
 
 const services = [
   {
     id: 'ear-care',
     title: 'Ear Care',
     description: 'Comprehensive ear care including hearing tests, wax removal, and surgery',
-    image: '/images/services/ear-care.jpg',
+    image: getImagePath('/images/services/ear-care.jpg'),
   },
   {
     id: 'nose-sinus',
     title: 'Nose & Sinus Care',
     description: 'Treatment for sinusitis, allergies, and nasal surgeries',
-    image: '/images/services/nose-care.jpg',
+    image: getImagePath('/images/services/nose-care.jpg'),
   },
   {
     id: 'throat-voice',
     title: 'Throat & Voice Treatment',
     description: 'Voice disorders, tonsillitis, and advanced throat treatments',
-    image: '/images/services/throat-care.jpg',
+    image: getImagePath('/images/services/throat-care.jpg'),
   },
   {
     id: 'head-neck',
     title: 'Head & Neck Care',
     description: 'Comprehensive treatment for head and neck conditions',
-    image: '/images/services/head-neck.jpg',
+    image: getImagePath('/images/services/head-neck.jpg'),
   },
   {
     id: 'pediatric',
     title: 'Pediatric ENT',
     description: 'Specialized ENT care for children',
-    image: '/images/services/pediatric-ent.jpg',
+    image: getImagePath('/images/services/pediatric-ent.jpg'),
   },
   {
     id: 'balance',
     title: 'Balance & Dizziness',
     description: 'Expert care for balance disorders and dizziness',
-    image: '/images/services/balance-dizziness.jpg',
+    image: getImagePath('/images/services/balance-dizziness.jpg'),
   }
 ];
 
@@ -54,7 +56,7 @@ const doctors = [
     ],
     consultationFee: '₹600',
     availability: 'Mon-Sat 05:30-08:30',
-    image: '/images/doctors/doctor1.jpg'
+    image: getImagePath('/images/doctors/doctor1.jpg')
   },
   {
     id: 'pranita-bauskar',
@@ -68,7 +70,7 @@ const doctors = [
     ],
     consultationFee: '₹600',
     availability: 'Mon-Sat 10:30-01:30',
-    image: '/images/doctors/doctor2.jpg'
+    image: getImagePath('/images/doctors/doctor2.jpg')
   }
 ];
 
@@ -79,7 +81,7 @@ export default function Home() {
       <section className="relative h-[80vh] min-h-[600px] flex items-center justify-center">
         <div className="absolute inset-0">
           <Image
-            src="/images/hero-banner.jpg"
+            src={getImagePath('/images/hero-banner.jpg')}
             alt="ENT Care"
             fill
             className="object-cover"
@@ -174,8 +176,8 @@ export default function Home() {
             <div className="overflow-x-auto pb-8">
               <div className="flex space-x-6 min-w-max px-4">
                 {[
-                  { src: '/images/clinic_gallery/opt.jpg', alt: 'Operating Theatre' },
-                  { src: '/images/clinic_gallery/room.jpg', alt: 'Private Rooms' }
+                  { src: getImagePath('/images/clinic_gallery/opt.jpg'), alt: 'Operating Theatre' },
+                  { src: getImagePath('/images/clinic_gallery/room.jpg'), alt: 'Private Rooms' }
                   // Add more gallery images here as they become available
                 ].map((image, index) => (
                   <div
@@ -219,7 +221,7 @@ export default function Home() {
             </div>
             <div className="relative h-[600px] rounded-xl overflow-hidden shadow-xl">
               <Image
-                src="/images/clinic_gallery/clinic_entry.jpg"
+                src= {getImagePath('/images/clinic_gallery/clinic_entry.jpg')}
                 alt="Our Clinic"
                 fill
                 className="object-cover"
@@ -273,12 +275,12 @@ export default function Home() {
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
             {[
-              { name: 'Acko Insurance', logo: '/images/insurance/acko.png' },
-              { name: 'Reliance Insurance', logo: '/images/insurance/reliance.png' },
-              { name: 'TATA AIG', logo: '/images/insurance/tata.png' },
-              { name: 'Star Health', logo: '/images/insurance/star-health.png' },
-              { name: 'HDFC ERGO', logo: '/images/insurance/hdfc-ergo.png' },
-              { name: 'Bajaj Allianz', logo: '/images/insurance/bajaj-allianz.png' }
+              { name: 'Acko Insurance', logo: getImagePath('/images/insurance/acko.png') },
+              { name: 'Reliance Insurance', logo: getImagePath('/images/insurance/reliance.png') },
+              { name: 'TATA AIG', logo: getImagePath('/images/insurance/tata.png') },
+              { name: 'Star Health', logo: getImagePath('/images/insurance/star-health.png') },
+              { name: 'HDFC ERGO', logo: getImagePath('/images/insurance/hdfc-ergo.png') },
+              { name: 'Bajaj Allianz', logo: getImagePath('/images/insurance/bajaj-allianz.png') }
             ].map((insurance, index) => (
               <div
                 key={index}
