@@ -256,7 +256,6 @@ export default function Home() {
                   <p className="text-blue-600 font-medium mb-4">{doctor.experience}</p>
                   <div className="space-y-2">
                     <p className="text-gray-600"><strong>Availability:</strong> {doctor.availability}</p>
-                    <p className="text-gray-600"><strong>Consultation Fee:</strong> {doctor.consultationFee}</p>
                   </div>
                   <span className="inline-block mt-4 text-blue-600 font-medium">View Full Profile →</span>
                 </div>
