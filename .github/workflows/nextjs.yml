@@ -48,6 +48,10 @@ jobs:
             echo "Unable to determine package manager"
             exit 1
           fi
+      - name: Setup Corepack
+        run: |
+          corepack enable
+          corepack prepare yarn@4.6.0 --activate
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
