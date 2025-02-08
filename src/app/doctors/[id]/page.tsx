@@ -34,7 +34,7 @@ const doctors = [
   },
   {
     id: 'pranita-bauskar',
-    name: 'Dr. Pranita Bauskar',
+    name: 'Dr. Pranita Kasat-Bauskar',
     qualifications: 'MBBS, FCPS - Oto-Rhino-Laryngology',
     experience: '20 years experience',
     specializations: [
